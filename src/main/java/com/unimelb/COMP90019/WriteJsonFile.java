@@ -8,7 +8,7 @@ public class WriteJsonFile {
     public static void WriteConfigJson(String args) {
         SearchTweets searchTweets = new SearchTweets();
 //    	searchTweets.setKeyword("great");
-        String src = "E:\\"+"location"+".json";//这里需要定义一个变量，如"E:\\json\\conf.json";//把json文件写到这个目录下
+        String src = "E:\\"+searchTweets.keywords+".json";//这里需要定义一个变量，如"E:\\json\\conf.json";//把json文件写到这个目录下
 
         File file = new File(src);
 
