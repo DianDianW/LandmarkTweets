@@ -112,10 +112,10 @@ public class OpenStreetMapUtils {
                 }
 //                System.out.println("lon=" + lon);
 //                System.out.println("lat=" + lat);
-//                System.out.print(bodbox.get(0).toString());
-//                System.out.print(bodbox.get(1).toString());
-//                System.out.print(bodbox.get(2).toString());
-//                System.out.print(bodbox.get(3).toString());
+                System.out.print(bodbox.get(0).toString());
+                System.out.print(bodbox.get(1).toString());
+                System.out.print(bodbox.get(2).toString());
+                System.out.print(bodbox.get(3).toString());
                 res.put("lon", Double.parseDouble(lon));
                 res.put("lat", Double.parseDouble(lat));
                 res.put("lonmin",bodbox.get(0));

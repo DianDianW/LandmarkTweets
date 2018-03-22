@@ -19,7 +19,7 @@ public class Listener {
 
             //int reTweetCount = tweet.getRetweetCount();
             JSONObject jsonObj = new JSONObject();
-            if (tweet.getText().toString().contains(SearchTweets.keywords)) {//match phrase with multi-words
+            if (!SearchTweets.keywordflag||tweet.getText().toString().contains(SearchTweets.keywords)) {//match phrase with multi-words
                 try {
                     jsonObj.put("text", tweet.getText());
                     //jsonObj.put("contributor", "null");

@@ -16,7 +16,7 @@ public class SearchTweets {
     public static String keywords = lmlist(1);
 
     static double[][] boundingBox = new double[2][2];
-    static boolean keywordflag = true;
+    static boolean keywordflag = false;
     static FilterQuery keywordfilter = new FilterQuery();
     static FilterQuery boundfilter = new FilterQuery();
 
@@ -63,10 +63,10 @@ public class SearchTweets {
 
     public static String lmlist(int i){
         ArrayList<String> landmarklist = new ArrayList<String>();
-        landmarklist.add("Melbourne Cricket Ground");//0
+        landmarklist.add("");//0
         landmarklist.add("State Library");
         landmarklist.add("Great Ocean Rd");
-        landmarklist.add("Queen Victoria Market");
+        landmarklist.add("Queen Victoria Market");//3
         landmarklist.add("Luna Park");
         landmarklist.add("Flinders Street");//5
         landmarklist.add("Melbourne Zoo");
