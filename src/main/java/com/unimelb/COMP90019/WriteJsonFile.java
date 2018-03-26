@@ -5,10 +5,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class WriteJsonFile {
+	public static String src;
     public static void WriteConfigJson(String args) {
         SearchTweets searchTweets = new SearchTweets();
 //    	searchTweets.setKeyword("great");
-        String src = "E:\\"+searchTweets.keywords+".json";//这里需要定义一个变量，如"E:\\json\\conf.json";//把json文件写到这个目录下
+        src = "E:\\"+"victoria"+".json";//杩欓噷闇�瑕佸畾涔変竴涓彉閲忥紝濡�"E:\\json\\conf.json";//鎶妀son鏂囦欢鍐欏埌杩欎釜鐩綍涓�
 
         File file = new File(src);
 

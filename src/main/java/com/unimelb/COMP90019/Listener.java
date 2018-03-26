@@ -8,17 +8,18 @@ package com.unimelb.COMP90019;
  */
 import twitter4j.*;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Listener {
-
+	static JSONObject jsonObj;
     static StatusListener listener = new StatusListener() {
         // @Override
         public void onStatus(Status tweet) {
 
             //int reTweetCount = tweet.getRetweetCount();
-            JSONObject jsonObj = new JSONObject();
+            jsonObj = new JSONObject();
             if (!SearchTweets.keywordflag||tweet.getText().toString().contains(SearchTweets.keywords)) {//match phrase with multi-words
                 try {
                     jsonObj.put("text", tweet.getText());
@@ -44,7 +45,14 @@ public class Listener {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-
+                String text;
+            	try {
+            		text = jsonObj.get("text").toString();
+            		ProcessData.findName(text);
+            	} catch (Exception e) {
+            		// TODO Auto-generated catch block
+            		e.printStackTrace();
+            	}
                 StringBuffer jsonString = new StringBuffer().append(jsonObj).append("\r\n");
                 //System.out.print(jsonString.toString());
 

@@ -5,6 +5,8 @@ import twitter4j.conf.ConfigurationBuilder;
 
 import com.alibaba.fastjson.JSONException;
 
+import com.unimelb.COMP90019.ProcessData;
+
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -13,12 +15,13 @@ import java.util.Map;
  * @since Twitter4J 2.1.7
  */
 public class SearchTweets {
-    public static String keywords = lmlist(1);
+    public static String keywords = lmlist(0);
 
     static double[][] boundingBox = new double[2][2];
     static boolean keywordflag = false;
     static FilterQuery keywordfilter = new FilterQuery();
     static FilterQuery boundfilter = new FilterQuery();
+    private static String path = "e:\\yaner\\res.txt";
 
     static WriteFileThread writeFileThread = new WriteFileThread();
 
@@ -41,7 +44,7 @@ public class SearchTweets {
                 should less than 1, some landmark should not use that.
              */
             Map<String, Double> coords;
-            coords = OpenStreetMapUtils.getInstance().getCoordinates(keywords+", Melbourne");
+            coords = OpenStreetMapUtils.getInstance().getCoordinates("Victoria Australia");
             //System.out.println("latitude :" + coords.get("latmin") + coords.get("latmax"));
             //System.out.println("longitude:" + coords.get("lonmin") + coords.get("lonmax"));
             //{{-55.3228175,-9.0882278},{72.2460938,168.2249543}};//au
@@ -57,6 +60,7 @@ public class SearchTweets {
             keywordfilter.track(keywords);
             twitterStream.filter(keywordfilter);
         }
+    	ProcessData.writefile();
     }
 
 

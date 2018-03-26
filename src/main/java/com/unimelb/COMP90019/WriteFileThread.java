@@ -2,7 +2,7 @@ package com.unimelb.COMP90019;
 
 public class WriteFileThread extends Thread{
 
-    String StringJson = "";//定义线程内变量
+    String StringJson = "";//
     boolean changedFlag = false;
     //int counter = 0;
 
@@ -11,7 +11,7 @@ public class WriteFileThread extends Thread{
         while(!interrupted()){
             while(changedFlag==true){
                 WriteJsonFile.WriteConfigJson(StringJson);
-                System.out.print(StringJson);
+                //System.out.print(StringJson);
                 this.changedFlag = false;
             }
         }
