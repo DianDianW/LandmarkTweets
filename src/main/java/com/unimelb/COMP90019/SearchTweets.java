@@ -5,8 +5,6 @@ import twitter4j.conf.ConfigurationBuilder;
 
 import com.alibaba.fastjson.JSONException;
 
-import com.unimelb.COMP90019.ProcessData;
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -21,7 +19,6 @@ public class SearchTweets {
     static boolean keywordflag = false;
     static FilterQuery keywordfilter = new FilterQuery();
     static FilterQuery boundfilter = new FilterQuery();
-    private static String path = "e:\\yaner\\res.txt";
 
     static WriteFileThread writeFileThread = new WriteFileThread();
 
@@ -60,7 +57,6 @@ public class SearchTweets {
             keywordfilter.track(keywords);
             twitterStream.filter(keywordfilter);
         }
-    	ProcessData.writefile();
     }
 
 

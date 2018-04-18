@@ -45,14 +45,6 @@ public class Listener {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-                String text;
-            	try {
-            		text = jsonObj.get("text").toString();
-            		ProcessData.findName(text);
-            	} catch (Exception e) {
-            		// TODO Auto-generated catch block
-            		e.printStackTrace();
-            	}
                 StringBuffer jsonString = new StringBuffer().append(jsonObj).append("\r\n");
                 //System.out.print(jsonString.toString());
 
