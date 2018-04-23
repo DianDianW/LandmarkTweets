@@ -23,6 +23,7 @@ public class Listener {
             if (!SearchTweets.keywordflag||tweet.getText().toString().contains(SearchTweets.keywords)) {//match phrase with multi-words
                 try {
                     jsonObj.put("text", tweet.getText());
+                    jsonObj.put("id",tweet.getId());
                     //jsonObj.put("contributor", "null");
                     //System.out.println(tweet.getText());
                     jsonObj.put("CreatedAt", tweet.getCreatedAt());
