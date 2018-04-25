@@ -9,7 +9,7 @@ public class WriteJsonFile {
     public static void WriteConfigJson(String args) {
         SearchTweets searchTweets = new SearchTweets();
 //    	searchTweets.setKeyword("great");
-        src = "E:\\"+"victoria"+".json";//杩欓噷闇�瑕佸畾涔変竴涓彉閲忥紝濡�"E:\\json\\conf.json";//鎶妀son鏂囦欢鍐欏埌杩欎釜鐩綍涓�
+        src = "E:\\"+"melbourne"+".json";//杩欓噷闇�瑕佸畾涔変竴涓彉閲忥紝濡�"E:\\json\\conf.json";//鎶妀son鏂囦欢鍐欏埌杩欎釜鐩綍涓�
 
         File file = new File(src);
 

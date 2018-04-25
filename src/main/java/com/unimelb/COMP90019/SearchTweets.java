@@ -41,7 +41,8 @@ public class SearchTweets {
                 should less than 1, some landmark should not use that.
              */
             Map<String, Double> coords;
-            coords = OpenStreetMapUtils.getInstance().getCoordinates("Victoria Australia");
+            coords = OpenStreetMapUtils.getInstance().getCoordinates("Melbourne");
+            //coords = OpenStreetMapUtils.getInstance().getCoordinates("Victoria Australia");
             //System.out.println("latitude :" + coords.get("latmin") + coords.get("latmax"));
             //System.out.println("longitude:" + coords.get("lonmin") + coords.get("lonmax"));
             //{{-55.3228175,-9.0882278},{72.2460938,168.2249543}};//au
